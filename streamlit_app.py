@@ -26,6 +26,9 @@ ingredients_list = st.multiselect(
 name_on_order = st.text_input('Name on Smoothie: ')
 st.write('The name on your Smoothie will be: ', name_on_order)
 
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
 
 
 if ingredients_list:
